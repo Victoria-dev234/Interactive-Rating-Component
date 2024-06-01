@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+/* || RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* || VARIABLES */
+:root {
+  --BGCOLOR: hsl(216, 12%, 8%);
+  --CARDCOLOR: hsl(213, 19%, 18%);
+  --FONT-COLOR: #ffffff;
+  --FONT-COLOR2: hsl(217, 12%, 63%);
+  --HOVER-COLOR: hsl(216, 12%, 54%);
+  --BUTTON-COLOR: hsl(25, 97%, 53%);
+}
+
+/* || GENERAL STYLES */
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: var(--BGCOLOR);
+  color: #fff;
+  margin: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+#rating,
+#thank-you-section {
+  width: 300px;
+  background-color: var(--CARDCOLOR);
+  padding: 2rem 1.5rem;
+  line-height: 1.4rem;
+  letter-spacing: 0.03em;
+  border-radius: 1.3rem;
+}
+
+#rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 1.5rem;
+}
+
+h2 {
+  font-weight: 700;
+  color: var(--FONT-COLOR);
+}
+
+p {
+  font-size: 15px;
+  color: var(--FONT-COLOR2);
+}
+
+.img-star {
+  padding: 0.85rem;
+}
+
+.img-star,
+.numbers {
+  background-color: #323a43da;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 50%;
+}
+
+.number-rating {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.numbers {
+  font-size: 13px;
+  color: var(--FONT-COLOR2);
+  cursor: pointer;
+}
+
+.numbers:hover {
+  background-color: var(--HOVER-COLOR);
+  color: var(--FONT-COLOR);
+}
+
+#button {
+  border: none;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 1rem 1.3rem;
+  color: var(--FONT-COLOR);
+  background-color: var(--BUTTON-COLOR);
+  border-radius: 3rem;
+  font-weight: 400;
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: var(--FONT-COLOR);
+  color: var(--BUTTON-COLOR);
+}
+
+#thank-you-section {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.4rem;
+  padding: 2rem 1.3rem;
+}
+
+#thank-you-section img {
+  max-width: 50%;
+}
+
+.text {
+  background-color: hsla(212, 14%, 23%, 0.856);
+  padding: 0.3rem 1rem;
+  border-radius: 3rem;
+  margin: 0.3rem 0;
+}
+
+.text p {
+  color: var(--BUTTON-COLOR);
+}
+
+#thank-you-section p {
+  font-size: 13px;
+}
+
+@media screen and (min-width: 375px) {
+  #rating,
+  #thank-you-section {
+    width: 350px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #rating,
+  #thank-you-section {
+    width: 380px;
+    padding: 2.1rem 2.1rem;
+  }
+}
